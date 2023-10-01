@@ -8,7 +8,8 @@ import {Server} from 'socket.io';
 
 const app = express();
 const PORT = process.env.PORT || 9000;
-const client_URL = "http://localhost:3000"
+// const client_URL = "http://localhost:3000"
+const client_URL = "https://gabby-app.netlify.app"
 //DataBase connection 
 mongoConnection(); 
 
