@@ -17,7 +17,7 @@ export const handleRegisterUser = async(req, res) => {
     try{
     const new_User  = {...req.body};
     if(!new_User){
-        res.status(400).send({message: "User Details not received"})
+       return res.status(400).send({message: "User Details not received"})
     }
    
     const found = await User.find({email: new_User.email}) 

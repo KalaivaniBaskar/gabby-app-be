@@ -8,8 +8,14 @@ import {Server} from 'socket.io';
 
 const app = express();
 const PORT = process.env.PORT || 9000;
-// const client_URL = "http://localhost:3000"
-const client_URL = "https://gabby-app.netlify.app"
+// const getClients = async(roomID) => {
+//     const cl =  await io.in(roomID).fetchSockets()
+//    console.log(cl)
+// }
+
+const client_URL = "http://localhost:3000"
+// const client_URL = "https://gabby-app.netlify.app"
+
 //DataBase connection 
 mongoConnection(); 
 
@@ -38,7 +44,8 @@ io.on("connection", (socket) => {
     socket.on("join_room", (data) => {
         socket.join(data.room);
         // console.log(`User with ID: ${socket.id} joined room : ${data.room} `)
-        socket.to(data.room).emit('notification', { message: `${data.name} is online` })
+        //socket.to(data.room).emit('notification', { message: `${data.name} is online` })
+         //console.log(getClients(data.room))
     })
     
     socket.on("send_msg", (data) => {
