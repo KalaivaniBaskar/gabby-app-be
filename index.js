@@ -13,8 +13,8 @@ const PORT = process.env.PORT || 9000;
 //    console.log(cl)
 // }
 
-const client_URL = "http://localhost:3000"
-// const client_URL = "https://gabby-app.netlify.app"
+// const client_URL = "http://localhost:3000"
+const client_URL = "https://gabby-app.netlify.app"
 
 //DataBase connection 
 mongoConnection(); 
