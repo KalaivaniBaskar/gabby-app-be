@@ -54,7 +54,6 @@ io.on("connection", (socket) => {
 
     socket.on("disconnect", () => {
         console.log("User left", socket.id)
-        
     }); 
 })
 // import crypto from 'crypto'

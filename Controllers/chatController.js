@@ -33,7 +33,7 @@ export const handleCreateRoom = async(req, res) => {
                 return res.status(200).json({ chat: getChat})
             }
             else {
-                const addRoom = new Chat({room_ID: room_ID})
+                const addRoom = new Chat({room_ID: room_ID, messages:[]})
                 //console.log(addRoom)
                 if(addRoom._id) {
                     await addRoom.save()
